@@ -2,4 +2,4 @@
 
 🚧 Website under construction! 🚧
 
-For information, follow Phoebe Nir ([@allthefrensy](https://twitter.com/allthefrensy) on Twitter
+For information, follow Phoebe Nir ([@allthefrensy](https://twitter.com/allthefrensy)) on Twitter
