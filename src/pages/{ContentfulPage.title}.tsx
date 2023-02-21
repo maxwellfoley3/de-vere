@@ -4,13 +4,19 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { PageLinks } from '../components/PageLinks';
 import { BLOCKS } from "@contentful/rich-text-types"
 import { MailChimpForm } from '../components/MailChimpForm';
+import "./App.scss"
+import edvtsBanner from '../images/edvts-banner.gif';
+import bar from '../images/bar.gif';
+import flowerbar from '../images/flowerbar.gif';
+import rose from '../images/rose.gif';
+import cross from '../images/cross.gif';
+import { DeVereMarquee } from "./DeVereMarquee";
 
 const Page = ({ data }) => {
   const { contentfulPage, allContentfulPage } = data;
   const options = {
     renderNode: {
        [BLOCKS.EMBEDDED_ASSET]: node => {
-          console.log("node", node);
           const imageID = node.data.target.sys.id;
           const {
              file: {url}, 
@@ -21,19 +27,34 @@ const Page = ({ data }) => {
        }
     }
   }
-  console.log("data", data)
+
   return (
     <main>
-      <title>{contentfulPage.title}</title>
-      <h1>Edward De Vere Truther Society</h1>
-      <h2>{contentfulPage.title}</h2>
-      <PageLinks data={allContentfulPage}/>
-      {renderRichText(contentfulPage.body, options)}
-      {
-        contentfulPage.title === 'Home' ? (
-          <MailChimpForm/>
-        ) : null
-      }
+      <title>Edward De Vere Truther Society</title>
+      <div className="App">
+        <div>
+          <img src={bar} className="flip-vertically" style={{position: "relative", top: "50px" }}/>
+        </div>
+        <div>
+          <img src={rose}/>
+          <img src={edvtsBanner} />
+          <img src={cross} style={{position: "relative", top: "30px" }}/>
+        </div>
+        <div>
+          <img src={bar}/>
+        </div>
+        <DeVereMarquee/>
+        <PageLinks data={allContentfulPage}/>
+        <div className="container">
+          <h2>{contentfulPage.title}</h2>
+          {
+            contentfulPage.title === 'Home' ? (
+              <MailChimpForm/>
+            ) : null
+          }
+          {renderRichText(contentfulPage.body, options)}
+        </div>
+      </div>
     </main>
   );
 };
