@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkthe_edward_de_vere_truther_society=self.webpackChunkthe_edward_de_vere_truther_society||[]).push([[691],{7200:function(e,t,r){r.r(t);var u=r(7294),_=r(1883);t.default=()=>((0,u.useEffect)((()=>{(0,_.c4)("/home")}),[]),null)}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-ceb340a2372de313f602.js.map
