@@ -19,7 +19,7 @@ import skull from '../images/stuff/skull.gif';
 import freewill from '../images/stuff/freewill.gif';
 
 
-import { DeVereMarquee } from "./DeVereMarquee";
+import { DeVereMarquee } from "../components/DeVereMarquee";
 
 const Page = ({ data }) => {
   const { contentfulPage, allContentfulPage } = data;
@@ -41,16 +41,18 @@ const Page = ({ data }) => {
     <main>
       <title>Edward De Vere Truther Society</title>
       <div className="App">
-        <div>
-          <img src={bar} className="flip-vertically" style={{position: "relative", top: "50px" }}/>
-        </div>
-        <div>
-          <img src={rose}/>
-          <img src={edvtsBanner} />
-          <img src={cross} style={{position: "relative", top: "30px" }}/>
-        </div>
-        <div>
-          <img src={bar}/>
+        <div className="banner">
+          <div>
+            <img src={bar} className="flip-vertically" style={{position: "relative"}}/>
+          </div>
+          <div >
+            <img src={rose} className="rose" style={{position: "relative", top: "10px"}}/>
+            <img src={edvtsBanner} />
+            <img src={cross} className="cross" style={{position: "relative", top: "30px" }}/>
+          </div>
+          <div>
+            <img src={bar}/>
+          </div>
         </div>
         <DeVereMarquee/>
         <PageLinks data={allContentfulPage}/>

@@ -10,10 +10,28 @@ html, body {
 	}
 }
 
+
+
 .App {
 	text-align: center;
 
+	.banner {
+		.rose {
+			@media (max-width: 1100px) {
+				display: none;
+			}
+		}
+		.cross {
+			@media (max-width: 1100px) {
+				display: none;
+			}
+		}
+	}
+
 	.flip-vertically {
+		@media (min-width: 1101px) {
+			top:50px;
+		}
 		transform: scaleY(-1);
 	}
 
@@ -48,6 +66,12 @@ html, body {
 		border-color: #00861d;
 		hr {
 			border: 1px solid #442f1e;
+		}
+		ul {
+			text-align: left;
+		}
+		ol {
+			text-align: left;
 		}
 		.mailchimp-form { 
 			background-color: #4f0000;
