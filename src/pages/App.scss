@@ -81,26 +81,36 @@ html, body {
 			margin-bottom: 20px;
 			padding: 10px;
 			padding-bottom: 40px;
+
 			input {
 				border: 1px solid #fbbc1b;
+				color: #fbbc1b;
+				background-color: #69482f;
+				font-family: 'Courier New', Courier, monospace;
 				padding: 5px;
 				margin-top: 10px;
 				margin-bottom: 10px;
 				background-color:none;
+
+				&:focus {
+					outline: none;
+				}
 			}
 
 			button {
-				background-color: #fbbc1b;
-				color: #001a07;
+				margin-left: 10px;
+				color: #fbbc1b;
 				font-weight: bold;
 				border: 1px solid #fbbc1b;
 				padding: 5px;
 				margin-top: 10px;
 				margin-bottom: 10px;
+				font-family: 'Courier New', Courier, monospace;
+				background-color: rgba(255, 255, 255, 0.0);
 				&:hover {
 					cursor: pointer;
-					background-color: #00861d;
-					border: 1px solid #00861d;
+					background-color: #000;
+					border: 1px solid #000;
 				}
 			}
 		}
