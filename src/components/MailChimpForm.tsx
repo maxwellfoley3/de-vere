@@ -19,18 +19,20 @@ export const MailChimpForm = () => {
 
 	return (
 		<main>
-			<h4>Sign up for our mailing list for updates!
-			</h4>
-			<MailchimpSubscribe
-				url={URL}
-				render={({ subscribe, status, message }) => (
-					<div>
-						<MailchimpSubscribe url={URL} />
-						{status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
-						{status === "error" && <div style={{ color: "red" }} dangerouslySetInnerHTML={{__html: message}}/>}
-						{status === "success" && <div style={{ color: "green" }}>Subscribed !</div>}
-					</div>
-				)}/>
+			<div className="mailchimp-form">
+				<h4>Sign up for our mailing list for updates!
+				</h4>
+				<MailchimpSubscribe
+					url={URL}
+					render={({ subscribe, status, message }) => (
+						<div>
+							<MailchimpSubscribe url={URL} />
+							{status === "sending" && <div>sending...</div>}
+							{status === "error" && <div dangerouslySetInnerHTML={{__html: message}}/>}
+							{status === "success" && <div>Subscribed !</div>}
+						</div>
+					)}/>
+			</div>
 		</main>
 	)
 }

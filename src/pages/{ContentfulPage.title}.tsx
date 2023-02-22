@@ -7,9 +7,18 @@ import { MailChimpForm } from '../components/MailChimpForm';
 import "./App.scss"
 import edvtsBanner from '../images/edvts-banner.gif';
 import bar from '../images/bar.gif';
-import flowerbar from '../images/flowerbar.gif';
 import rose from '../images/rose.gif';
 import cross from '../images/cross.gif';
+import button1 from '../images/button1.gif';
+import button3 from '../images/button3.gif';
+import mask1 from '../images/mask1.png';
+import mask2 from '../images/mask2.png';
+import createyourdrama from '../images/stuff/createyourdrama.gif';
+import dramaparty from '../images/stuff/dramaparty.gif';
+import skull from '../images/stuff/skull.gif';
+import freewill from '../images/stuff/freewill.gif';
+
+
 import { DeVereMarquee } from "./DeVereMarquee";
 
 const Page = ({ data }) => {
@@ -46,13 +55,30 @@ const Page = ({ data }) => {
         <DeVereMarquee/>
         <PageLinks data={allContentfulPage}/>
         <div className="container">
-          <h2>{contentfulPage.title}</h2>
+          <h1 className="page-title">
+            <img src={mask1} style={{height:"40px", paddingRight:"20px"}}/>
+              {contentfulPage.title}
+            <img src={mask2} style={{height:"40px", paddingLeft:"20px"}}/>
+          </h1>
+          <hr/>
           {
             contentfulPage.title === 'Home' ? (
               <MailChimpForm/>
             ) : null
           }
           {renderRichText(contentfulPage.body, options)}
+        </div>
+        <div>
+          <img src={button3}/>
+          <img src={button1}/>
+        </div>
+        <div>
+          <img src={skull}/>
+          <img src={createyourdrama}/>
+          <img src={dramaparty}/>
+        </div>
+        <div>
+          <img src={freewill}/>
         </div>
       </div>
     </main>

@@ -4,6 +4,10 @@ html, body {
 	background-color: #001a07;
 	font-family: 'Courier New', Courier, monospace;
 	color: #fbbc1b;
+	
+	img {
+		max-width: 100%;
+	}
 }
 
 .App {
@@ -34,16 +38,59 @@ html, body {
 
 	.container {
 		margin-top: 40px;
+		margin-bottom: 40px;
 		margin-left: auto;
 		margin-right: auto;
 		background-color: #69482f;
 		max-width: 800px;
 		border-style: outset;
 		border-width: 5px;
+		border-color: #00861d;
+		hr {
+			border: 1px solid #442f1e;
+		}
+		.mailchimp-form { 
+			background-color: #4f0000;
+			max-width: 500px;
+			margin: auto;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			padding: 10px;
+			padding-bottom: 40px;
+			input {
+				border: 1px solid #fbbc1b;
+				padding: 5px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				background-color:none;
+			}
+
+			button {
+				background-color: #fbbc1b;
+				color: #001a07;
+				font-weight: bold;
+				border: 1px solid #fbbc1b;
+				padding: 5px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				&:hover {
+					cursor: pointer;
+					background-color: #00861d;
+					border: 1px solid #00861d;
+				}
+			}
+		}
 		img {
 			max-width: 80%;
 		}
 		padding: 20px;
+		h1.page-title { 
+			font-family: luminari, fantasy;
+			font-size: 48px;
+			color: #fbbc1b;
+			text-shadow: 2px 2px #00861d;
+			margin-bottom: 10px;
+		}
 	}
 
 	hr {
