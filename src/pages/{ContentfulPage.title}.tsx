@@ -11,12 +11,13 @@ import rose from '../images/rose.gif';
 import cross from '../images/cross.gif';
 import button1 from '../images/button1.gif';
 import button3 from '../images/button3.gif';
-import mask1 from '../images/mask1.png';
-import mask2 from '../images/mask2.png';
+import monas from '../images/monas.png';
+import weirdsymbol from '../images/weirdsymbol.png';
 import createyourdrama from '../images/stuff/createyourdrama.gif';
 import dramaparty from '../images/stuff/dramaparty.gif';
 import skull from '../images/stuff/skull.gif';
 import freewill from '../images/stuff/freewill.gif';
+import temple from '../images/temple.png';
 
 
 import { DeVereMarquee } from "../components/DeVereMarquee";
@@ -57,10 +58,13 @@ const Page = ({ data }) => {
         <DeVereMarquee/>
         <PageLinks data={allContentfulPage}/>
         <div className="container">
+          <div>
+            <img src={temple} style={{height:"40px", position: 'relative', top: '25px'}}/>
+          </div>
           <h1 className="page-title">
-            <img src={mask1} style={{height:"40px", paddingRight:"20px"}}/>
+            <img src={monas} style={{height:"60px", position: 'relative', top: '10px', paddingRight:"10px"}}/>
               {contentfulPage.title}
-            <img src={mask2} style={{height:"40px", paddingLeft:"20px"}}/>
+            <img src={weirdsymbol} style={{height:"60px", position: 'relative', top: '10px', paddingLeft:"10px"}}/>
           </h1>
           <hr/>
           {
