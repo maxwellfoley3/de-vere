@@ -1,5 +1,9 @@
 import type { GatsbyConfig } from "gatsby";
 
+require("dotenv").config({
+  path: `.env`,
+})
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `The Edward De Vere Truther Society`,
@@ -12,7 +16,7 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "y-uS1Sggvr34B_b2p7uN8lpWNJZastqkzl5zeKY-XE4",
+      "accessToken": process.env.CONTENTFUL_ACCESS_TOKEN,
       "spaceId": "abe4eyj4cbv7"
     }
   }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", "gatsby-plugin-mdx", {
