@@ -110,7 +110,7 @@ export const data = graphql`
         }
       }
     }
-    allContentfulPage(sort: {createdAt: ASC}) {
+    allContentfulPage(sort: {createdAt: ASC}, filter: {node_locale: {eq: "en-US"}}) {
       nodes {
         title
         pagePath: gatsbyPath(filePath: "/{ContentfulPage.title}")

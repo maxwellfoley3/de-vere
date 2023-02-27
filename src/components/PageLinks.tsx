@@ -3,8 +3,8 @@ import { graphql } from 'gatsby';
 import { Link } from 'gatsby';
 import flower from '../images/flower-li.gif';
 
-console.log('flower', flower);
 export const PageLinks = ({ data }) => {
+	console.log('page links', data)
 	return (
 		<div className="links">
 			<ul>
