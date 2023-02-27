@@ -16,7 +16,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - run: echo ${{ secrets.CONTENTFUL_ACCESS_TOKEN }} > .env
+      env: 
+        CONTENTFUL_ACCESS_TOKEN: secrets.CONTENTFUL_ACCESS_TOKEN
       - run: yarn
       - run: yarn build
       - run: echo "edwarddeveretruthersociety.org" > ./public/CNAME
