@@ -64,6 +64,14 @@ html, body {
 		border-style: outset;
 		border-width: 5px;
 		border-color: #7d5636;
+		a {
+			color: #00d90b;
+			text-decoration: underline;
+			&:hover {
+				color: #fbbc1b;
+				text-decoration: underline;
+			}
+		}
 		hr {
 			border: 1px solid #442f1e;
 		}
@@ -95,6 +103,10 @@ html, body {
 				&:focus {
 					outline: none;
 				}
+			}
+
+			input::placeholder {
+				color: #fbbc1b55;	
 			}
 
 			button {

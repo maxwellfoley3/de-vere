@@ -25,6 +25,8 @@ import { DeVereMarquee } from "../components/DeVereMarquee";
 const Page = ({ data }) => {
   const { contentfulPage, allContentfulPage } = data;
   const options = {
+    renderText: text => text.split('\n').flatMap((text, i) => [i > 0 && <br />, 
+    text]),   
     renderNode: {
        [BLOCKS.EMBEDDED_ASSET]: node => {
           const imageID = node.data.target.sys.id;
@@ -38,6 +40,7 @@ const Page = ({ data }) => {
     }
   }
 
+  console.log('contentfulPage', contentfulPage)
   return (
     <main>
       <title>Edward De Vere Truther Society</title>
