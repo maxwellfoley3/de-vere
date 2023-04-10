@@ -4,7 +4,7 @@ import MailchimpSubscribe from "react-mailchimp-subscribe"
 
 const U = 'a3b67284e9ded45067b69063a'
 const ID = '812cc47d24'
-const URL = `https://gmail.us21.list-manage.com/subscribe/post?u=${U}&amp;id=${ID}&amp;f_id=0060fbe1f0`
+const URL = `https://edwarddeveretruthersociety.us17.list-manage.com/subscribe/post?u=${U}&amp;id=${ID}`
 
 export const MailChimpForm = () => {
 	const [ emailValue, setEmailValue ] = React.useState("")

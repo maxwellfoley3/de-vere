@@ -40,7 +40,6 @@ const Page = ({ data }) => {
     }
   }
 
-  console.log('contentfulPage', contentfulPage)
   return (
     <main>
       <title>Edward De Vere Truther Society</title>
