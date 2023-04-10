@@ -2,8 +2,8 @@
 import * as React from "react"
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 
-const U = '1f2ef6fad3b428855d9d06e47'
-const ID = '433a114975'
+const U = 'a3b67284e9ded45067b69063a'
+const ID = '812cc47d24'
 const URL = `https://gmail.us21.list-manage.com/subscribe/post?u=${U}&amp;id=${ID}&amp;f_id=0060fbe1f0`
 
 export const MailChimpForm = () => {
